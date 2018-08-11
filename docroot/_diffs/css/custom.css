@@ -1,0 +1,15 @@
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+.logo .logo-lg svg{
+	fill: white;
+    width: 50px;
+}
+
+.logo .logo-mini svg{
+	fill: white;
+    width: 50px;
+}
+
+.aui .navbar.navbar-static-top{
+	margin-bottom:0;
+}
