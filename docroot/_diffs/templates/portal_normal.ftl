@@ -14,7 +14,7 @@
 	  <link rel="stylesheet" href="${css_folder}/adminlte/ionicons.min.css">
 	  
 	  <!-- Theme style -->
-	  <link rel="stylesheet" href="${css_folder}/adminlte/AdminLTE.min.css">
+	  <link rel="stylesheet" href="${css_folder}/adminlte/AdminLTE.css?v1.2">
 	  <!-- AdminLTE Skins. Choose a skin from the css/skins
 	   folder instead of downloading all of them to reduce the load. -->
 	  <link rel="stylesheet" href="${css_folder}/adminlte/_all-skins.min.css">
