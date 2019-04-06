@@ -14,7 +14,7 @@
 	  <link rel="stylesheet" href="${css_folder}/adminlte/ionicons.min.css">
 	  
 	  <!-- Theme style -->
-	  <link rel="stylesheet" href="${css_folder}/adminlte/AdminLTE.min.css">
+	  <link rel="stylesheet" href="${css_folder}/adminlte/AdminLTE.css?v1.1">
 	  <!-- AdminLTE Skins. Choose a skin from the css/skins
 	   folder instead of downloading all of them to reduce the load. -->
 	  <link rel="stylesheet" href="${css_folder}/adminlte/_all-skins.min.css">
@@ -53,7 +53,7 @@
 
 ${theme.include(body_top_include)}
 
-<#if is_signed_in>
+<#if is_signed_in && admin_user>
 	<@liferay.dockbar />
 </#if>
 
@@ -81,41 +81,22 @@ ${theme.include(body_top_include)}
 	          <!-- User Account: style can be found in dropdown.less -->
 	          <li class="dropdown user user-menu">
 	            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-	              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-	              <span class="hidden-xs">Alexander Pierce</span>
+	              <img src="${profilePic}" class="user-image" alt="User Image">
+	              <span class="hidden-xs">${userName}</span>
 	            </a>
 	            <ul class="dropdown-menu">
 	              <!-- User image -->
 	              <li class="user-header">
-	                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+	                <img src="${profilePic}" class="img-circle" alt="User Image">
 	
 	                <p>
-	                  Alexander Pierce - Web Developer
-	                  <small>Member since Nov. 2012</small>
+	                  ${userName}
 	                </p>
-	              </li>
-	              <!-- Menu Body -->
-	              <li class="user-body">
-	                <div class="row">
-	                  <div class="col-xs-4 text-center">
-	                    <a href="#">Followers</a>
-	                  </div>
-	                  <div class="col-xs-4 text-center">
-	                    <a href="#">Sales</a>
-	                  </div>
-	                  <div class="col-xs-4 text-center">
-	                    <a href="#">Friends</a>
-	                  </div>
-	                </div>
-	                <!-- /.row -->
 	              </li>
 	              <!-- Menu Footer-->
 	              <li class="user-footer">
-	                <div class="pull-left">
-	                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-	                </div>
 	                <div class="pull-right">
-	                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+	                  <a href="/c/portal/logout" class="btn btn-default btn-flat">Salir</a>
 	                </div>
 	              </li>
 	            </ul>
@@ -183,7 +164,7 @@ ${theme.include(body_bottom_include)}
 
 ${theme.include(bottom_include)}
 
-
+<script src="${javascript_folder}/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="${javascript_folder}/adminlte/adminlte.min.js"></script>
 <!-- Sparkline -->

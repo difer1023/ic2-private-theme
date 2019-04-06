@@ -6,19 +6,23 @@
 		<#list nav_items as nav_item>
 			<#assign nav_item_attr_has_popup = "" />
 			<#assign nav_item_attr_selected = "" />
-			<#assign nav_item_css_class = "treeview menu-open" />
-
+			<#assign nav_item_css_class = "" />
+			<#if nav_item.hasChildren()>
+				<#assign nav_item_css_class = "treeview menu-open" />
+			</#if>
 			<#if nav_item.isSelected()>
 				<#assign nav_item_attr_has_popup = "aria-haspopup='true'" />
 				<#assign nav_item_attr_selected = "aria-selected='true'" />
-				<#assign nav_item_css_class = "active treeview menu-open" />
+				<#assign nav_item_css_class = "active "+nav_item_css_class />
 			</#if>
 	        
 			<li ${nav_item_attr_selected} class="${nav_item_css_class}" id="layout_${nav_item.getLayoutId()}" role="presentation">
 				
 				<a aria-labelledby="layout_${nav_item.getLayoutId()}" ${nav_item_attr_has_popup} href="${nav_item.getURL()}" ${nav_item.getTarget()} role="menuitem">
-					<#assign icono = nav_item.getLayout().getExpandoBridge().getAttribute("icono") >
-					<i class="fa ${icono}"></i>
+					<#if nav_item.getLayout().getExpandoBridge().getAttribute("icono")??>
+						<#assign icono = nav_item.getLayout().getExpandoBridge().getAttribute("icono") >
+						<i class="fa ${icono}"></i>
+					</#if>
 					<span>${nav_item.getName()}</span>
 					<#if nav_item.hasChildren()>
 						<span class="pull-right-container">
