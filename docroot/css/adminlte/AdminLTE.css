@@ -9,6 +9,8 @@
  * Core: General Layout Style
  * -------------------------
  */
+
+.aui{
 html,
 body {
   height: 100%;
@@ -1317,6 +1319,7 @@ a:focus {
  * Component: Progress Bar
  * -----------------------
  */
+
 .aui{
 .progress,
 .progress > .progress-bar {
@@ -1395,51 +1398,52 @@ a:focus {
 .table tr > td .progress {
   margin: 0;
 }
-.progress-bar.progress-bar-light-blue,
-.progress-bar.progress-bar-primary {
+.progress-bar{
+&.progress-bar-light-blue,
+.progress-bar-primary {
   background-color: #3c8dbc;
 }
-.progress-striped .progress-bar-light-blue,
+&.progress-striped .progress-bar-light-blue,
 .progress-striped .progress-bar-primary {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
-.progress-bar.progress-bar-green,
-.progress-bar.progress-bar-success {
+&.progress-bar-green,
+.progress-bar-success {
   background-color: #00a65a;
 }
-.progress-striped .progress-bar-green,
+&.progress-striped .progress-bar-green,
 .progress-striped .progress-bar-success {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
-.progress-bar.progress-bar-aqua,
-.progress-bar.progress-bar-info {
+&.progress-bar-aqua,
+.progress-bar-info {
   background-color: #00c0ef;
 }
-.progress-striped .progress-bar-aqua,
+&.progress-striped .progress-bar-aqua,
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
-.progress-bar.progress-bar-yellow,
-.progress-bar.progress-bar-warning {
+&.progress-bar-yellow,
+.progress-bar-warning {
   background-color: #f39c12;
 }
-.progress-striped .progress-bar-yellow,
+&.progress-striped .progress-bar-yellow,
 .progress-striped .progress-bar-warning {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
-.progress-bar.progress-bar-red,
-.progress-bar.progress-bar-danger {
+&.progress-bar-red,
+.progress-bar-danger {
   background-color: #dd4b39;
 }
-.progress-striped .progress-bar-red,
+&.progress-striped .progress-bar-red,
 .progress-striped .progress-bar-danger {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -1562,6 +1566,7 @@ a:focus {
 .box .nav-stacked > li {
   border-bottom: 1px solid #f4f4f4;
   margin: 0;
+  width:100%;
 }
 .box .nav-stacked > li:last-of-type {
   border-bottom: none;
@@ -4976,4 +4981,5 @@ table.text-center th {
   .table-responsive > .table tr td {
     white-space: normal !important;
   }
+}
 }
