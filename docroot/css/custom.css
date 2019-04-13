@@ -13,3 +13,16 @@
 .aui .navbar.navbar-static-top{
 	margin-bottom:0;
 }
+
+@media (min-width: 980px){
+	
+.aui .box-body .collapse {
+    display: none;
+    &.in{
+    	display:block;
+    }
+}
+
+
+
+}
