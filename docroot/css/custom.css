@@ -14,6 +14,10 @@
 	margin-bottom:0;
 }
 
+.aui.ic2 .modal {
+    display: none;
+}
+
 @media (min-width: 980px){
 	
 .aui .box-body .collapse {
