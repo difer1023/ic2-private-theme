@@ -14,19 +14,15 @@
 	margin-bottom:0;
 }
 
-.aui.ic2 .modal {
-    display: none;
+.aui.ic2 .modal.bsModal {
+   	display: none;
 }
 
 @media (min-width: 980px){
-	
-.aui .box-body .collapse {
-    display: none;
-    &.in{
-    	display:block;
-    }
-}
-
-
-
+	.aui .box-body .collapse {
+	    display: none;
+	    &.in{
+	    	display:block;
+	    }
+	}
 }

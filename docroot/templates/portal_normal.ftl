@@ -28,25 +28,6 @@
 	<!-- jQuery 3 -->
 	<script src="${javascript_folder}/jquery-3.3.1.min.js"></script>
 	
-	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
-		<g>
-			<symbol id="icon-ic2">
-				<path d="M7.963,37.336c0-0.913,0.249-1.162,1.162-1.162h3.071c0.913,0,1.162,0.332,1.162,1.162v55.771
-					c0,0.912-0.249,1.162-1.162,1.162H9.125c-0.913,0-1.162-0.25-1.162-1.162V37.336z"/>
-				<path d="M55.52,95.348c-16.267-0.414-28.965-14.109-28.965-30.126c0-16.018,12.698-29.628,28.965-30.126v4.813
-					c-13.197,0.498-23.488,12.699-23.488,25.313c0,12.698,10.208,24.897,23.488,25.313V95.348z M57.178,35.096
-					c7.719,0.249,15.852,3.569,20.832,8.548c0.58,0.581,0.58,0.996,0,1.577l-1.992,2.241c-0.58,0.581-1.162,0.581-1.742,0
-					c-3.486-3.735-9.627-7.304-17.098-7.553V35.096z M57.178,90.536c7.637-0.25,13.529-3.818,17.346-7.719
-					c0.582-0.582,1.08-0.498,1.578,0.082l1.992,2.158c0.58,0.664,0.58,1.08-0.084,1.742c-5.063,5.063-13.029,8.301-20.832,8.549
-					V90.536z"/>
-				<path d="M84.567,7.073c-2.72,0.113-5.202,1.186-7.247,3.42c-0.321,0.319-0.562,0.239-0.8-0.002l-0.878-0.962
-					c-0.239-0.241-0.318-0.441,0.002-0.72c2.406-2.393,5.289-3.945,8.93-4.055L84.567,7.073z M85.374,4.756
-					c8.158,0.222,11.019,7.068,6.366,12.335l-14.002,16.16l-1.96-0.005c-0.239,0-0.319-0.081-0.318-0.321l0.001-0.36
-					c0-0.28,0.081-0.439,0.321-0.759l14.121-16.119c2.93-3.312,1.663-8.394-4.536-8.611L85.374,4.756z M80.744,30.979l12.997,0.035
-					c0.44,0.001,0.561,0.122,0.56,0.522l-0.004,1.2c-0.001,0.44-0.121,0.56-0.562,0.558l-14.957-0.041L80.744,30.979z"/>
-			</symbol>
-		</g>
-	</svg>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -57,6 +38,7 @@ ${theme.include(body_top_include)}
 
 <#if is_signed_in && admin_user>
 	<@liferay.dockbar />
+	<#else>
 </#if>
 
 <div class="wrapper">
@@ -65,9 +47,13 @@ ${theme.include(body_top_include)}
 	    <a href="index2.html" class="logo">
 	      <!-- mini logo for sidebar mini 50x50 pixels -->
 	      
-	      <span class="logo-mini"><svg viewbox="0 0 100 100" x="0" y="0"><use xlink:href="#icon-ic2" ></use></svg></span>
+	      <span class="logo-mini">
+	      	<img alt="${logo_description}" height="${site_logo_height}" src="${site_logo}" width="${site_logo_width}" />
+	      </span>
 	      <!-- logo for regular state and mobile devices -->
-	      <span class="logo-lg"><svg viewbox="0 0 100 100" x="0" y="0"><use xlink:href="#icon-ic2" ></use></svg></span>
+	      <span class="logo-lg">
+	      	<img alt="${logo_description}" height="${site_logo_height}" src="${site_logo}" width="${site_logo_width}" />
+	      </span>
 	    </a>
 	
 	    <!-- Header Navbar: style can be found in header.less -->
@@ -133,9 +119,9 @@ ${theme.include(body_top_include)}
 	      <h1>
 	        ${the_title}
 	      </h1>
-	      <ol class="breadcrumb">
+	      <!--<ol class="breadcrumb">
 	        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-	        <li class="active">Dashboard</li>
+	        <li class="active">Dashboard</li>-->
 	      </ol>
 	    </section>
 		
@@ -155,10 +141,9 @@ ${theme.include(body_top_include)}
 
 	<footer class="main-footer" >
 		<div class="pull-right hidden-xs">
-	      <b>Version</b> 2.4.0
+	      <b>Version</b> 1.0.0
 	    </div>
-	    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-	    reserved.
+	    <strong>Copyright &copy; 2019 Diego Galeano, Laura Prada.</strong> Derechos reservados.
 	</footer>
 </div>
 
